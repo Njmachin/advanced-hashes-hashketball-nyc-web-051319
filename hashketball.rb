@@ -154,10 +154,11 @@ def team_names
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
       if attribute == :team_names 
-        return game_hash[location][:colors]
+        arr << data
       end
     end
   end
+  arr
 end
 
 
