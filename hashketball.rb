@@ -168,7 +168,8 @@ def player_numbers(team)
     team_data.each do |attribute, data|
       if data.include?(team)
         data.each do | player, stat|
-          stat.each do 
+          stats.each do |stats, num|
+            
       end
     end
   end
