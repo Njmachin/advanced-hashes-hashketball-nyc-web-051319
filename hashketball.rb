@@ -210,7 +210,7 @@ def big_shoe_rebounds
               end
             end
           end
-          return game_hash[:]
+          return game_hash[location][attribute][player_name][:rebound]
         end
       end
     end
