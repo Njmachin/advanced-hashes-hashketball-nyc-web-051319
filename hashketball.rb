@@ -197,5 +197,21 @@ def big_shoe_rebounds
   player_name = ""
   player_shoe = 0
   
-  
-end
+  game_hash.each do |location, team_data|
+    if game_hash[location][:team_name].include?(team)
+        
+      team_data.each do |attribute, data|
+        if data.class == Hash
+          data.each do | player, stats|
+            stats.each do |stat, num|
+              if stat == :number
+                arr << num
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  arr
+end  
