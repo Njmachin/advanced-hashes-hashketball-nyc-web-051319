@@ -82,7 +82,7 @@ def game_hash
           :blocks => 15,
           :slam_dunks => 10
         },
-        "DeSagna Drop" => {
+        "DeSagna Diop" => {
           :number => 2,
           :shoe => 14,
           :points => 24,
@@ -145,7 +145,14 @@ def team_colors(team)
     end
   end
 end
-  
+    game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if data.include?(name)
+        return game_hash[location][attribute][name][:shoe]
+      end
+    end
+  end
+end
 
 
 
