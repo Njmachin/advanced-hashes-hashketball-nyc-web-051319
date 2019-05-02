@@ -139,16 +139,10 @@ def shoe_size(name)
 end
 
 def team_colors(team)
-  game_hash.each do |location, team_data|
-    if team_data.include?(team)
-      return game_hash[location][team][:colors]
-    end
-  end
-end
     game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
-      if data.include?(name)
-        return game_hash[location][attribute][name][:shoe]
+      if team_data.include?(team)
+        return game_hash[location][:color]
       end
     end
   end
