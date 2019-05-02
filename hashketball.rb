@@ -170,10 +170,14 @@ def player_numbers(team)
         data.each do | player, stats|
           stats.each do |stat, num|
             if stat == :number
-              
+              arr << number
+            end
+          end
+        end
       end
     end
   end
+  arr
 end
 
 
