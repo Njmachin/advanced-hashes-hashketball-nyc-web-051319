@@ -161,7 +161,18 @@ def team_names
   arr
 end
 
-def player_numbers()
+def player_numbers(team)
+  arr = []
+  
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if data.include?(team)
+        data.each do | player, stat|
+          stat.each do 
+      end
+    end
+  end
+end
 
 
 
