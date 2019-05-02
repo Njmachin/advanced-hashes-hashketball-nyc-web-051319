@@ -203,7 +203,9 @@ def big_shoe_rebounds
           data.each do | player, stats|
             stats.each do |stat, num|
               if stat == :shoe
-                arr << num
+                if num > player_shoe
+                  player_shoe = num
+                  player_name = player
               end
             end
           end
